@@ -20,9 +20,8 @@ pytz = "*"
 geopy = "*"
 rosbags = "*"
 papermill = "*"
-imgkit = "*"
-movingpandas = "*"
 sklearn = "*"
+tabulate = "*"
 
 [dev-packages]
 

@@ -1,8 +1,8 @@
 # Data collection during RoBiMoTrop campagne 
 
-The python scripts implement the data aggregation and processing pipeline of the RoBiMoTrop project aggregating water parameters by an robotic boat. It transforms data from different sources to Python pandas dataframes and ROS2 Bag files.
+The python scripts implement the data aggregation and processing pipeline of the RoBiMoTrop project aggregating water parameters by a robotic boat. It transforms data from different sources to Python pandas dataframes and ROS2 Bag files.
 
-The project was initiated by TU Bergakademie Freiberg. 
+TU Bergakademie Freiberg initiated the project.
 
 ## System structure and data sources
 
@@ -19,7 +19,7 @@ Component        CO2 sensor    -------------------->| ESP32     |
                                   |          |-----------------------> Logfiles (intended feature)
                                   +----------+     
                                                     
-Autonomouse                       +----------+    
+Autonomous                        +----------+    
 Boat Control    Depth sensor   -->| ArduPilot|
 Component                         | Pixhawk  |-----------------------> Download via ArduPilot
                                   |          |                         Mission planner
@@ -34,30 +34,22 @@ Component       Camera         -->|          |
 
 | Component                | Format                  | Contained Data                                                                                                                                                                       |
 | ------------------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Measurement              | csv and Meta data files | Measurement data of aggreation phases with different durations (5 - 20min)                                                                                                           |
+| Measurement              | csv and Meta data files | Measurement data of aggregation phases with different durations (5 - 20min)                                                                                                           |
 |                          | `proprocessed data`     | `CO2(ppm)`, `airtemp in(degreeC)`, `humidity in(rH)`, `pressure in(mbar)`, `airtemp out(degreeC)`, `humidity out(rH)`, `pressure out(mbar)`, `PAR(umol m-2s-1)`, `H2O temp(degreeC)` |
-| Autonomouse Boat Control | ArduPilot Log Files     | Positional information (raw, estimated), GNSS time stamps, robots modes, depth measurements                                                                                          |
+| Autonomous Boat Control | ArduPilot Log Files     | Positional information (raw, estimated), GNSS time stamps, robots modes, depth measurements                                                                                          |
 |                          | `proprocessed data`     | `lat_est`, `lon_est`, `yaw_est`, `hdop`, `lat_meas`, `lon_meas`, `depth`, `location`                                                                                                                                                                                   |
 | Obstacle Monitoring      | ROS2 bag Files          | Distances of obstacles in front of the robot                                                                                                                                         |
 
 All raw data sets are ready for download at [Link](). 
 
-
-
-## Project folder structure 
-
-```
-
-```
-
 ## Processing chain 
 
-+ __Mesurement Component__ - Read the non standard format with `11_Extract_Measurements.ipynb`. The underlying python script stores the corresponding pandas files in `preprocessed` folder.
++ __Measurement Component__ - Read the non standard format with `11_Extract_Measurements.ipynb`. The underlying python script stores the corresponding pandas files in `preproc_data_` folder.
 
 
-+ __ABC Component__ - The Log-Files of ArduPilot can be downloaded via Mission Planner as _bin_ or _log_ file. In case of reading the SD Card directly only binary files are available. Fortunatly, ArduPilot offers an tool for offline translation too. Preprocess all files by running the notebook `10_Extract_ArduPilotData.ipynb`. All dataframes are stored in `preprocessed` folder.
++ __ABC Component__ - The Log-Files of ArduPilot can be downloaded via Mission Planner as _bin_ or _log_ file. In case of reading the SD Card directly only binary files are available. Fortunately, ArduPilot offers an tool for offline translation too. After preprocessing all files by running the notebook `10_Extract_ArduPilotData.ipynb`. All dataframes are stored in `preproc_data_` folder.
 
-+ __Obstacle Monitoring Componente__ - _have to be done_
++ __Obstacle Monitoring Component__ - _have to be done_
 
 ## ToDos
 
@@ -79,3 +71,8 @@ All raw data sets are ready for download at [Link]().
 - [ ] Activate Cameras on Raspberry Pi
 - [ ] Add rosbag recording mechanism
 - [ ] Upload all data to MARV
+
+## Acknowledgments
+
+Many thanks to all contributors of open source repositories from different python packages we used. You make a great job!
+We want to emphasize one project especially - the implementation of a student team from Hamburg University for extracting data from  Ardupilot Log files was very helpful and saved us a lot of time [Link](https://gitlab.rrz.uni-hamburg.de/bay2789/bslogfiles/-/tree/master). 
