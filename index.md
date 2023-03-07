@@ -2,8 +2,10 @@ This following map summarizes the 5 locations of the campaign. Click on the red 
 
 <iframe src="html/index.html" height="500" width="1000"></iframe>
 
-| Location                                                 | Parameter |
-|----------------------------------------------------------|-----------|
-| [Balbina Dam](https://en.wikipedia.org/wiki/Balbina_Dam) |           |
-| Lagoa Jandira                                            |           |
-| Lagoa Caldeirão                                          |           |
+| Location                                                       | Parameters                |
+| -------------------------------------------------------------- | ------------------------- |
+| [Balbina Reservoir](https://en.wikipedia.org/wiki/Balbina_Dam) | Maximum water depth: 30 m |
+| Lagoa Jandira                                                  |                           |
+| Lagoa Caldeirão                                                |                           |
+|                                                                |                           |
+|                                                                |                           |
