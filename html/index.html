@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_36c52a935ca87ef08e0b52121b1ba741 {
+                #map_d4dcaf0700994ca3bc03a52db08c9d7d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,18 +39,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_36c52a935ca87ef08e0b52121b1ba741" ></div>
+            <div class="folium-map" id="map_d4dcaf0700994ca3bc03a52db08c9d7d" ></div>
         
 </body>
 <script>
     
     
-            var map_36c52a935ca87ef08e0b52121b1ba741 = L.map(
-                "map_36c52a935ca87ef08e0b52121b1ba741",
+            var map_d4dcaf0700994ca3bc03a52db08c9d7d = L.map(
+                "map_d4dcaf0700994ca3bc03a52db08c9d7d",
                 {
                     center: [-2.7329779144807236, -59.94036346072743],
                     crs: L.CRS.EPSG3857,
-                    zoom: 9,
+                    zoom: 8,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -60,100 +60,100 @@
 
         
     
-            var tile_layer_1ac99b3054dac7f0458fef470738c876 = L.tileLayer(
+            var tile_layer_97ff698d0f131e7d71d701adb18d9867 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_36c52a935ca87ef08e0b52121b1ba741);
+            ).addTo(map_d4dcaf0700994ca3bc03a52db08c9d7d);
         
     
-            var tile_layer_13bdb153571ff641166715bb31f7cad8 = L.tileLayer(
+            var tile_layer_94b6cfcec762fe44b3363084bd2ecf2b = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_36c52a935ca87ef08e0b52121b1ba741);
+            ).addTo(map_d4dcaf0700994ca3bc03a52db08c9d7d);
         
     
-            var circle_marker_ed3f46b1db5dc5030217252dfd558bf7 = L.circleMarker(
+            var circle_marker_c8438cf3b6ad120fa284d6803d650ca6 = L.circleMarker(
                 [-1.9093849205932403, -59.461050169645475],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_36c52a935ca87ef08e0b52121b1ba741);
+            ).addTo(map_d4dcaf0700994ca3bc03a52db08c9d7d);
         
     
-        var popup_c8d00886f7335a33ca1122b510c0180a = L.popup({"maxWidth": "100%"});
+        var popup_ae983dddfa0dbbe3d3fa2a8a1f290533 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_f88d3edb3a03dd26ed1f06bdd2f25f30 = $(`<div id="html_f88d3edb3a03dd26ed1f06bdd2f25f30" style="width: 100.0%; height: 100.0%;"><a href=https://fr.wikipedia.org/wiki/Place_Guillaume_II>Place Guillaume II</a></div>`)[0];
-                popup_c8d00886f7335a33ca1122b510c0180a.setContent(html_f88d3edb3a03dd26ed1f06bdd2f25f30);
+                var html_b9ab305a3d4c2ba262ef20fdcafb1d5e = $(`<div id="html_b9ab305a3d4c2ba262ef20fdcafb1d5e" style="width: 100.0%; height: 100.0%;"><a href=https://fr.wikipedia.org/wiki/Place_Guillaume_II>Place Guillaume II</a></div>`)[0];
+                popup_ae983dddfa0dbbe3d3fa2a8a1f290533.setContent(html_b9ab305a3d4c2ba262ef20fdcafb1d5e);
             
         
 
-        circle_marker_ed3f46b1db5dc5030217252dfd558bf7.bindPopup(popup_c8d00886f7335a33ca1122b510c0180a)
+        circle_marker_c8438cf3b6ad120fa284d6803d650ca6.bindPopup(popup_ae983dddfa0dbbe3d3fa2a8a1f290533)
         ;
 
         
     
     
-            circle_marker_ed3f46b1db5dc5030217252dfd558bf7.bindTooltip(
+            circle_marker_c8438cf3b6ad120fa284d6803d650ca6.bindTooltip(
                 `<div>
-                     Zoom to Balbina
+                     Click to zoom to Balbina
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var circle_marker_327987dcbc7535abc1e3876a17bcb232 = L.circleMarker(
+            var circle_marker_edd9fea6c051c6d032e4fcc2faade5f9 = L.circleMarker(
                 [-3.233785010079359, -60.24179798606113],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_36c52a935ca87ef08e0b52121b1ba741);
+            ).addTo(map_d4dcaf0700994ca3bc03a52db08c9d7d);
         
     
-        var popup_fd97bc0a2cd395372468726f467e3165 = L.popup({"maxWidth": "100%"});
+        var popup_28eea90ee58b2cf7a11223ecf25df419 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_e81b3642f235426f2fe9b972d0c3a4ab = $(`<div id="html_e81b3642f235426f2fe9b972d0c3a4ab" style="width: 100.0%; height: 100.0%;"><a href=https://fr.wikipedia.org/wiki/Place_Guillaume_II>Place Guillaume II</a></div>`)[0];
-                popup_fd97bc0a2cd395372468726f467e3165.setContent(html_e81b3642f235426f2fe9b972d0c3a4ab);
+                var html_dc1e04e4f53ce69542232a6f4e252ae1 = $(`<div id="html_dc1e04e4f53ce69542232a6f4e252ae1" style="width: 100.0%; height: 100.0%;"><a href=https://fr.wikipedia.org/wiki/Place_Guillaume_II>Place Guillaume II</a></div>`)[0];
+                popup_28eea90ee58b2cf7a11223ecf25df419.setContent(html_dc1e04e4f53ce69542232a6f4e252ae1);
             
         
 
-        circle_marker_327987dcbc7535abc1e3876a17bcb232.bindPopup(popup_fd97bc0a2cd395372468726f467e3165)
+        circle_marker_edd9fea6c051c6d032e4fcc2faade5f9.bindPopup(popup_28eea90ee58b2cf7a11223ecf25df419)
         ;
 
         
     
     
-            circle_marker_327987dcbc7535abc1e3876a17bcb232.bindTooltip(
+            circle_marker_edd9fea6c051c6d032e4fcc2faade5f9.bindTooltip(
                 `<div>
-                     Zoom to Jandira
+                     Click to zoom to Jandira
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var circle_marker_4912fa9d1441aeeb4b696210527194f1 = L.circleMarker(
+            var circle_marker_42385c5b69587477158c5aa062beb389 = L.circleMarker(
                 [-3.246442183367647, -60.217212147492646],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_36c52a935ca87ef08e0b52121b1ba741);
+            ).addTo(map_d4dcaf0700994ca3bc03a52db08c9d7d);
         
     
-        var popup_91394b0aebcafa6b96fc6ac16f3c9ce4 = L.popup({"maxWidth": "100%"});
+        var popup_0de6db502dce69f0ac815db136aca341 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_906a5aae046d0c2e08a1662affe2adb4 = $(`<div id="html_906a5aae046d0c2e08a1662affe2adb4" style="width: 100.0%; height: 100.0%;"><a href=https://fr.wikipedia.org/wiki/Place_Guillaume_II>Place Guillaume II</a></div>`)[0];
-                popup_91394b0aebcafa6b96fc6ac16f3c9ce4.setContent(html_906a5aae046d0c2e08a1662affe2adb4);
+                var html_c5ad29a202a9d72b66041519bfc5fbec = $(`<div id="html_c5ad29a202a9d72b66041519bfc5fbec" style="width: 100.0%; height: 100.0%;"><a href=https://fr.wikipedia.org/wiki/Place_Guillaume_II>Place Guillaume II</a></div>`)[0];
+                popup_0de6db502dce69f0ac815db136aca341.setContent(html_c5ad29a202a9d72b66041519bfc5fbec);
             
         
 
-        circle_marker_4912fa9d1441aeeb4b696210527194f1.bindPopup(popup_91394b0aebcafa6b96fc6ac16f3c9ce4)
+        circle_marker_42385c5b69587477158c5aa062beb389.bindPopup(popup_0de6db502dce69f0ac815db136aca341)
         ;
 
         
     
     
-            circle_marker_4912fa9d1441aeeb4b696210527194f1.bindTooltip(
+            circle_marker_42385c5b69587477158c5aa062beb389.bindTooltip(
                 `<div>
-                     Zoom to Caldeirao
+                     Click to zoom to Caldeirao
                  </div>`,
                 {"sticky": true}
             );
