@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+jupyter = "*"
+geopandas = "*"
+folium = "*"
+haversine = "*"
+pynmea2 = "*"
+contextily = "*"
+matplotlib = "*"
+mapclassify = "*"
+json5 = "*"
+numpy = "*"
+python-dateutil = "*"
+pytz = "*"
+geopy = "*"
+rosbags = "*"
+papermill = "*"
+imgkit = "*"
+movingpandas = "*"
+sklearn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
