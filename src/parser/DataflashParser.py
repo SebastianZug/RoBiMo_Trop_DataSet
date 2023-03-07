@@ -1,3 +1,7 @@
+# This file was extracted from an existing parser for Ardupilot Log files
+# https://gitlab.rrz.uni-hamburg.de/bay2789/bslogfiles/-/tree/master
+# Author Marius Block 
+
 import pandas as pd
 import sys
 import re
