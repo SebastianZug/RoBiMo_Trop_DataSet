@@ -1,8 +1,8 @@
 # Data collection during RoBiMoTrop campagne 
 
-The python scripts implement the data aggregation and processing pipeline of the RoBiMoTrop project aggregating water parameters by a robotic boat. It transforms data from different sources to Python pandas dataframes and ROS2 Bag files.
+The python scripts implement the data aggregation and processing pipeline of the RoBiMoTrop project aggregating water parameters by a robotic boat. It transforms data from different sources to Python pandas dataframes and ROS2 Bag files. TU Bergakademie Freiberg initiated the project.
 
-TU Bergakademie Freiberg initiated the project.
+The data can be explored on the corresponding [website](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/) and are available in the `data` folder. 
 
 ## System structure and data sources
 
@@ -40,7 +40,6 @@ Component       Camera         -->|          |
 |                          | `proprocessed data`     | `lat_est`, `lon_est`, `yaw_est`, `hdop`, `lat_meas`, `lon_meas`, `depth`, `location`                                                                                                                                                                                   |
 | Obstacle Monitoring      | ROS2 bag Files          | Distances of obstacles in front of the robot                                                                                                                                         |
 
-All raw data sets are ready for download at [Link](). 
 
 ## Processing chain 
 
