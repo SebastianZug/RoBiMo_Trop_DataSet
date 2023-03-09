@@ -76,20 +76,36 @@ def run_aggregation(ardupilot_file):
  
     # ## Merging
 
+    print("    ... merging individual data frames")
     df_result = pd.merge(df_pos_est, df_pos_meas, left_index=True, right_index=True)
     df_result = pd.merge(df_result, df_range, left_index=True, right_index=True)
+ 
+     # ## Filtering
+    print("    ... checking time stamps")
+    critical_date = "2000-01-01"
+    invalid_df = df_result[df_result['datetime_AMT'] < critical_date]
+    if not invalid_df.empty:
+        print (f"      ! {invalid_df.shape[0]} samples of timestamps before 1.01.2000!")
+        print (f"      ! Will be excluded from data set.")
+        df_result = df_result[df_result['datetime_AMT'] > critical_date]
 
     df_result.reset_index(inplace=True)
     df_result.set_index("datetime_AMT", inplace=True)
-    df_result = df_result.resample('1s').first()
+
+    print("    ... resample data frame")
+    df_result = df_result.tail(1000).resample('1s').first()
 
     return df_result
 
 def main():
 
-    data_folder = "../../raw_data/ardupilot/day_01/"
+    # Data set with invalid time stamps
+    #data_folder = "../../data/raw_data/ardupilot/day_07/"
+    #_file_name = "00000048.log"
 
+    data_folder = "../../data/raw_data/ardupilot/day_01/"
     _file_name = "00000038.log"
+
     ardupilot_file = Path.cwd() / data_folder / _file_name
 
     df_result = run_aggregation(ardupilot_file)
