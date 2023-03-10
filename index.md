@@ -11,7 +11,7 @@ In the course of the project, XXX measurements were taken with the multimodal me
 | Location                                                       | Daylight | Night |
 | -------------------------------------------------------------- | -------- | ----- |
 | [Balbina Reservoir](https://en.wikipedia.org/wiki/Balbina_Dam) | 17       | 10    |
-| Lagoa Jandira                                                  | 26       | 9     |
-| Lagoa Caldeirão                                                | 13       | -     |
+| Caldeirao                                                      | 13       | nan   |
+| Jandira                                                        | 26       | 9     |
 |                                                                |          |       |
 |                                                                |          |       |
