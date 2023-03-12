@@ -50,7 +50,7 @@ init_doc()
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[6]:
 
 
 import pandas as pd
@@ -69,7 +69,7 @@ pn.extension('tabulator')
 import hvplot.pandas
 
 
-# In[2]:
+# In[7]:
 
 
 input_data_folder_base = Path("../results/")
@@ -84,26 +84,33 @@ output_image_folder = output_folder_base / Path("./images/")
 print(f"Writing website information to \\n    {output_folder_base}")
 
 
-# In[3]:
+# In[8]:
 
 
 # cache data to improve dashboard performance
 if 'data' not in pn.state.cache.keys():
     #df_key_param = pd.read_pickle(input_data_folder / key_parameter_file_name)
-    df_key_param = pd.read_pickle("https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
+    #df_key_param = pd.read_pickle("https://api.allorigins.win/get?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
+    df_key_param = pd.read_pickle("https://api.allorigins.win/raw?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
     pn.state.cache['data'] = df_key_param.copy()
 else: 
     df_key_param = pn.state.cache['data']
 
 
-# In[6]:
+# In[9]:
+
+
+df_key_param
+
+
+# In[10]:
 
 
 # Make DataFrame Pipeline Interactive
 idf = df_key_param.interactive()
 
 
-# In[13]:
+# In[11]:
 
 
 select_lake = pn.widgets.Select(
@@ -126,7 +133,7 @@ def _update_lake(select_lake):
     select_position.value = positions[0]
 
 
-# In[14]:
+# In[12]:
 
 
 data_pipeline_overview = (
@@ -142,7 +149,7 @@ data_pipeline_overview = (
 # data_pipeline_overview
 
 
-# In[15]:
+# In[13]:
 
 
 data_pipeline_all = (
@@ -156,14 +163,14 @@ data_pipeline_all = (
 #data_pipeline_all
 
 
-# In[16]:
+# In[14]:
 
 
 #co_plot=selected_data_pipeline.hvplot(use_index=True, y='CO2(ppm)', title="CO_2 concentration")
 #pressure_plot=selected_data_pipeline.hvplot(use_index=True, y='pressure in(mbar)', title="Pressure in")
 
 
-# In[17]:
+# In[15]:
 
 
 table_overview = data_pipeline_overview.pipe(pn.widgets.Tabulator, pagination="remote", title="Aggregated key parameters of the position")
