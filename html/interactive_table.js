@@ -50,7 +50,7 @@ init_doc()
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[1]:
 
 
 import pandas as pd
@@ -69,7 +69,7 @@ pn.extension('tabulator')
 import hvplot.pandas
 
 
-# In[7]:
+# In[2]:
 
 
 input_data_folder_base = Path("../results/")
@@ -84,20 +84,23 @@ output_image_folder = output_folder_base / Path("./images/")
 print(f"Writing website information to \\n    {output_folder_base}")
 
 
-# In[8]:
+# In[3]:
 
 
 # cache data to improve dashboard performance
 if 'data' not in pn.state.cache.keys():
     #df_key_param = pd.read_pickle(input_data_folder / key_parameter_file_name)
     #df_key_param = pd.read_pickle("https://api.allorigins.win/get?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
-    df_key_param = pd.read_pickle("https://api.allorigins.win/raw?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
+    #df_key_param = pd.read_pickle("https://api.allorigins.win/raw?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
+
+    df_key_param = pd.read_pickle("https://sebastianzug.github.io/RoBiMo_Trop_DataSet/results/key_parameter_2023.p?raw=true")
+
     pn.state.cache['data'] = df_key_param.copy()
 else: 
     df_key_param = pn.state.cache['data']
 
 
-# In[9]:
+# In[4]:
 
 
 df_key_param
