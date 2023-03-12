@@ -69,6 +69,14 @@ pn.extension('tabulator')
 import hvplot.pandas
 
 
+# # Generation of an interactive table
+# 
+# \`\`\`
+# pipenv run panel convert notebooks/93_Provide_interactive_table.ipynb --to pyodide-worker --title interactive_table  --out ./html
+# \`\`\`
+# 
+# Umbenennen der Dateien in der Ordnerstruktur nicht vergessen! Anpassen des js Pfades in der html Datei analog.
+
 # In[2]:
 
 
@@ -90,11 +98,8 @@ print(f"Writing website information to \\n    {output_folder_base}")
 # cache data to improve dashboard performance
 if 'data' not in pn.state.cache.keys():
     #df_key_param = pd.read_pickle(input_data_folder / key_parameter_file_name)
-    #df_key_param = pd.read_pickle("https://api.allorigins.win/get?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
     #df_key_param = pd.read_pickle("https://api.allorigins.win/raw?url=https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/results/key_parameter_2023.p?raw=true")
-
     df_key_param = pd.read_pickle("https://sebastianzug.github.io/RoBiMo_Trop_DataSet/results/key_parameter_2023.p?raw=true")
-
     pn.state.cache['data'] = df_key_param.copy()
 else: 
     df_key_param = pn.state.cache['data']
@@ -106,14 +111,14 @@ else:
 df_key_param
 
 
-# In[10]:
+# In[5]:
 
 
 # Make DataFrame Pipeline Interactive
 idf = df_key_param.interactive()
 
 
-# In[11]:
+# In[6]:
 
 
 select_lake = pn.widgets.Select(
@@ -136,15 +141,20 @@ def _update_lake(select_lake):
     select_position.value = positions[0]
 
 
-# In[12]:
+# In[7]:
+
+
+relevant_parameter = ['start', 'end', 'hdop_max', 'nsats_min', 'CO2_min', 'CO2_max', 'PAR_min',  'PAR_max']
+
+
+# In[8]:
 
 
 data_pipeline_overview = (
     idf[
-        (idf.experiment_location == select_lake ) &
-        (idf.position == select_position)
+        (idf.experiment_location == select_lake)
     ]\
-           [['start', 'end', 'CO2_min', 'CO2_max', 'PAR_min',  'PAR_max']]\
+           [relevant_parameter]\
            .describe(datetime_is_numeric=True)\
            .loc[['mean', 'std', 'min', 'max'],:]
 )
@@ -152,7 +162,7 @@ data_pipeline_overview = (
 # data_pipeline_overview
 
 
-# In[13]:
+# In[9]:
 
 
 data_pipeline_all = (
@@ -160,27 +170,27 @@ data_pipeline_all = (
         (idf.experiment_location == select_lake ) &
         (idf.position == select_position)
     ]\
-        [['start', 'end', 'hdop_max', 'nsats_min', 'CO2_min', 'CO2_max', 'PAR_min',  'PAR_max']]
+        [relevant_parameter]
 )
 
 #data_pipeline_all
 
 
-# In[14]:
+# In[10]:
 
 
 #co_plot=selected_data_pipeline.hvplot(use_index=True, y='CO2(ppm)', title="CO_2 concentration")
 #pressure_plot=selected_data_pipeline.hvplot(use_index=True, y='pressure in(mbar)', title="Pressure in")
 
 
-# In[15]:
+# In[11]:
 
 
 table_overview = data_pipeline_overview.pipe(pn.widgets.Tabulator, pagination="remote", title="Aggregated key parameters of the position")
 table_all = data_pipeline_all.pipe(pn.widgets.Tabulator, pagination="remote", title="Parameter of all measurements at this position")
 
 
-# In[ ]:
+# In[16]:
 
 
 #template = pn.template.FastListTemplate(
@@ -213,11 +223,11 @@ template = pn.template.FastListTemplate(
               select_lake,
               select_position],
     main=[pn.Row(
-               pn.pane.Markdown("Aggregated key parameters of the position"),
+               pn.pane.Markdown("__Aggregated key parameters of the lake__"),
                table_overview.panel(width=1000)
          ),
          pn.Row(
-               pn.pane.Markdown("Parameter of all measurements at this position"),
+               pn.pane.Markdown("__Parameter of all measurements at this position__"),
                table_all.panel(width=1000)
          )     
     ]
