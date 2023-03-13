@@ -6,7 +6,7 @@ The following map shows the 4 locations of the campaign. Click on the red dots t
 
 ## Measurements
 
-In the course of the project, XXX measurements were taken with the multimodal measurement system. Our focus was on the autonomous recording of variables both during the day and at night.
+In the course of the project, XXX measurements were taken with the multi-modal measurement system. Our focus was on the autonomous recording of variables both during the day and at night.
 
 | Location                                                       | Daylight | Night |
 | -------------------------------------------------------------- | -------- | ----- |
@@ -14,8 +14,6 @@ In the course of the project, XXX measurements were taken with the multimodal me
 | Caldeirao                                                      | 25       | nan   |
 | Iranduba                                                       | 19       | 12    |
 | Jandira                                                        | 25       | 8     |'
-
-The data set can be downloaded [here](). A first overview is available at an interactive [Dashboard](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/interactive_table.html)
 
 ## Aggregated Data 
 
