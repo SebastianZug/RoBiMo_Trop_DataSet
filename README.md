@@ -60,16 +60,16 @@ Component       Camera         -->|          |
 - [X] Integrate sensor data (measurement, wind, humidity, light sensor)
 - [X] Provide overview map of all measurement points (station perspective)
 - [ ] Draw robot parameter
-- [ ] Improve data description on README
+- [X] Improve data description on README
 - [ ] Check the content of GPA to evaluate the GNSS position measurement [Link](https://ardupilot.org/copter/docs/logmessages.html)
 - [ ] Generate ROS2 Bag from data set
 
 ### Phase 2: ROS Data aggregation
 
-- [ ] Adjusting time stamp on RP
-- [ ] Activate Cameras on Raspberry Pi
-- [ ] Add rosbag recording mechanism
-- [ ] Upload all data to MARV
+- [X] Adjusting time stamp on RP
+- [X] Activate Cameras on Raspberry Pi
+- [X] Add rosbag recording mechanism
+- [X] Upload all data to MARV
 
 ## Acknowledgments
 
