@@ -15,3 +15,7 @@ In the course of the project, XXX measurements were taken with the multimodal me
 | Jandira                                                        | 26       | 9     |
 |                                                                |          |       |
 |                                                                |          |       |
+
+The data set can be downloaded [here](). A first overview is available at an interactive [Dashboard](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/interactive_table.html)
+
+## Aggregated Data 

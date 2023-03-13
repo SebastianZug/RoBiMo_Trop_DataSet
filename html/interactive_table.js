@@ -50,7 +50,7 @@ init_doc()
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import pandas as pd
@@ -77,7 +77,7 @@ import hvplot.pandas
 # 
 # Umbenennen der Dateien in der Ordnerstruktur nicht vergessen! Anpassen des js Pfades in der html Datei analog.
 
-# In[2]:
+# In[ ]:
 
 
 input_data_folder_base = Path("../results/")
@@ -92,7 +92,7 @@ output_image_folder = output_folder_base / Path("./images/")
 print(f"Writing website information to \\n    {output_folder_base}")
 
 
-# In[3]:
+# In[ ]:
 
 
 # cache data to improve dashboard performance
@@ -105,20 +105,20 @@ else:
     df_key_param = pn.state.cache['data']
 
 
-# In[4]:
+# In[ ]:
 
 
 df_key_param
 
 
-# In[5]:
+# In[ ]:
 
 
 # Make DataFrame Pipeline Interactive
 idf = df_key_param.interactive()
 
 
-# In[6]:
+# In[ ]:
 
 
 select_lake = pn.widgets.Select(
@@ -141,13 +141,13 @@ def _update_lake(select_lake):
     select_position.value = positions[0]
 
 
-# In[7]:
+# In[ ]:
 
 
 relevant_parameter = ['start', 'end', 'hdop_max', 'nsats_min', 'CO2_min', 'CO2_max', 'PAR_min',  'PAR_max']
 
 
-# In[8]:
+# In[ ]:
 
 
 data_pipeline_overview = (
@@ -162,7 +162,7 @@ data_pipeline_overview = (
 # data_pipeline_overview
 
 
-# In[9]:
+# In[ ]:
 
 
 data_pipeline_all = (
@@ -176,21 +176,21 @@ data_pipeline_all = (
 #data_pipeline_all
 
 
-# In[10]:
+# In[ ]:
 
 
 #co_plot=selected_data_pipeline.hvplot(use_index=True, y='CO2(ppm)', title="CO_2 concentration")
 #pressure_plot=selected_data_pipeline.hvplot(use_index=True, y='pressure in(mbar)', title="Pressure in")
 
 
-# In[11]:
+# In[ ]:
 
 
 table_overview = data_pipeline_overview.pipe(pn.widgets.Tabulator, pagination="remote", title="Aggregated key parameters of the position")
 table_all = data_pipeline_all.pipe(pn.widgets.Tabulator, pagination="remote", title="Parameter of all measurements at this position")
 
 
-# In[16]:
+# In[ ]:
 
 
 #template = pn.template.FastListTemplate(

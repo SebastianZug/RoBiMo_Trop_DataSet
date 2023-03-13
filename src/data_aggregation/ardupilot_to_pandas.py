@@ -14,10 +14,11 @@ if module_path not in sys.path:
 
 from parser.DataflashParser import read_from_log, write_csv, interpolate_data
 
-def run_aggregation(ardupilot_file):
+def run_aggregation(ardupilot_file, output=False):
     # ## Step 1: Extracting estimated positional information from AHR2
 
-    print("    ... extracting estimated positional information from AHR2")
+    if output:
+        print("    ... extracting estimated positional information from AHR2")
     #FMT, 66, 45, AHR2, QccCfLLffff, TimeUS,Roll,Pitch,Yaw,Alt,Lat,Lng,Q1,Q2,Q3,Q4
     df, stats, msg = read_from_log(str(ardupilot_file), ['AHR2'], time_precision=1,
                                     flatline_remove=False, apply_zeros=False,
@@ -35,7 +36,8 @@ def run_aggregation(ardupilot_file):
 
     # ## Step 2: Extracting time stamps and positions from GPS
 
-    print("    ... extracting time stamps and positions from GPS")
+    if output:
+        print("    ... extracting time stamps and positions from GPS")
     # FMT, 84, 51, GPS, QBBIHBcLLeffffB, TimeUS,I,Status,GMS,GWk,NSats,HDop,Lat,Lng,Alt,Spd,GCrs,VZ,Yaw,U
     # group_mults = ['70', '66', '66', '66', '48', '71', '71', '63', '63', '63', '63']
     df, stats, msg = read_from_log(str(ardupilot_file), ['GPS'], time_precision=1,
@@ -65,7 +67,8 @@ def run_aggregation(ardupilot_file):
 
     # ## Step 3: Aggregate depth information from RFND
 
-    print("    ... aggregate depth information from RFND")
+    if output:
+        print("    ... aggregate depth information from RFND")
     # FMT, 106, 16, RFND, QBCBB, TimeUS,Instance,Dist,Stat,Orient
     df, stats, msg = read_from_log(str(ardupilot_file), ['RFND'], time_precision=1,
                                     flatline_remove=False, apply_zeros=False,
@@ -75,13 +78,14 @@ def run_aggregation(ardupilot_file):
     df_range['depth'] = df['RFND_Dist'] * 101.03
  
     # ## Merging
-
-    print("    ... merging individual data frames")
+    if output:
+        print("    ... merging individual data frames")
     df_result = pd.merge(df_pos_est, df_pos_meas, left_index=True, right_index=True)
     df_result = pd.merge(df_result, df_range, left_index=True, right_index=True)
  
-     # ## Filtering
-    print("    ... checking time stamps")
+     # ## Filtering invalid time stamps
+    if output:
+        print("    ... checking time stamps")
     critical_date = "2000-01-01"
     invalid_df = df_result[df_result['datetime_AMT'] < critical_date]
     if not invalid_df.empty:
@@ -92,8 +96,8 @@ def run_aggregation(ardupilot_file):
     df_result.reset_index(inplace=True)
     df_result.set_index("datetime_AMT", inplace=True)
 
-    print("    ... resample data frame")
-    df_result = df_result.tail(1000).resample('1s').first()
+    #print("    ... resample data frame")
+    #df_result = df_result.resample(resampling_period).first()
 
     return df_result
 

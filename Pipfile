@@ -22,6 +22,12 @@ rosbags = "*"
 papermill = "*"
 sklearn = "*"
 tabulate = "*"
+hvplot = "*"
+panel = "*"
+jupyter-bokeh = "*"
+cartopy = "*"
+geoviews = "*"
+pyproj = "*"
 
 [dev-packages]
 
