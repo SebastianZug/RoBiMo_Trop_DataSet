@@ -12,7 +12,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_6005f7b951f5435640fae0fc43719ef5 {
+                #map_182599f65faa49de98e43b14c21e9e2f {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_6005f7b951f5435640fae0fc43719ef5" ></div>
+            <div class="folium-map" id="map_182599f65faa49de98e43b14c21e9e2f" ></div>
         
 </body>
 <script>
     
     
-            var map_6005f7b951f5435640fae0fc43719ef5 = L.map(
-                "map_6005f7b951f5435640fae0fc43719ef5",
+            var map_182599f65faa49de98e43b14c21e9e2f = L.map(
+                "map_182599f65faa49de98e43b14c21e9e2f",
                 {
                     center: [-2.970178176157957, -60.0425907780488],
                     crs: L.CRS.EPSG3857,
@@ -60,40 +60,46 @@
 
         
     
-            var tile_layer_0e836942adcae05c1d1ea54120f4fb84 = L.tileLayer(
-                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
-                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_6005f7b951f5435640fae0fc43719ef5);
+            var tile_layer_654961560e4e556835c0754705d1d3ec = L.tileLayer(
+                "Stamen Terrain",
+                {"attribution": "Stamen Terrain", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
         
     
-            var tile_layer_d9719f1d7a4f322d393b9f80aaecc889 = L.tileLayer(
+            tile_layer_654961560e4e556835c0754705d1d3ec.addTo(map_182599f65faa49de98e43b14c21e9e2f);
+        
+    
+            var tile_layer_3d7d15d9caafa0dae2e2b53987c6bb29 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_6005f7b951f5435640fae0fc43719ef5);
+            );
         
     
-            var circle_marker_a63ff148e1375beb66f3830a2fd3ef59 = L.circleMarker(
+            tile_layer_3d7d15d9caafa0dae2e2b53987c6bb29.addTo(map_182599f65faa49de98e43b14c21e9e2f);
+        
+    
+            var circle_marker_66e12085e933f0cbc5647cffe81d7d37 = L.circleMarker(
                 [-1.9093849231102733, -59.46105016983506],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_6005f7b951f5435640fae0fc43719ef5);
+            ).addTo(map_182599f65faa49de98e43b14c21e9e2f);
         
     
-        var popup_ba7dcb2b63f0b0ec7cc54120c53d6556 = L.popup({"maxWidth": "100%"});
+        var popup_44cfb5df4f60d90f91221d07e7f12ff3 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_b53cb08544f6f0a7d5bc51221a1bcee9 = $(`<div id="html_b53cb08544f6f0a7d5bc51221a1bcee9" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/balbina.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/balbina.html', '_blank').focus();">Zoom to Balbina</a></div>`)[0];
-                popup_ba7dcb2b63f0b0ec7cc54120c53d6556.setContent(html_b53cb08544f6f0a7d5bc51221a1bcee9);
+                var html_4f9a62ebcf9fbdce6cf35f1666c54d4c = $(`<div id="html_4f9a62ebcf9fbdce6cf35f1666c54d4c" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/balbina.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/balbina.html', '_blank').focus();">Zoom to Balbina</a></div>`)[0];
+                popup_44cfb5df4f60d90f91221d07e7f12ff3.setContent(html_4f9a62ebcf9fbdce6cf35f1666c54d4c);
             
         
 
-        circle_marker_a63ff148e1375beb66f3830a2fd3ef59.bindPopup(popup_ba7dcb2b63f0b0ec7cc54120c53d6556)
+        circle_marker_66e12085e933f0cbc5647cffe81d7d37.bindPopup(popup_44cfb5df4f60d90f91221d07e7f12ff3)
         ;
 
         
     
     
-            circle_marker_a63ff148e1375beb66f3830a2fd3ef59.bindTooltip(
+            circle_marker_66e12085e933f0cbc5647cffe81d7d37.bindTooltip(
                 `<div>
                      Click to zoom to Balbina
                  </div>`,
@@ -101,28 +107,28 @@
             );
         
     
-            var circle_marker_264a2fb415edab58f60caaa49a854bb4 = L.circleMarker(
-                [-3.2337850482062533, -60.24179793689053],
+            var circle_marker_08580485c96ee5ed96b25f3034668f2e = L.circleMarker(
+                [-3.2367431133480014, -60.241142950023836],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_6005f7b951f5435640fae0fc43719ef5);
+            ).addTo(map_182599f65faa49de98e43b14c21e9e2f);
         
     
-        var popup_f60a917acb35f591d8a7324a2fbbb359 = L.popup({"maxWidth": "100%"});
+        var popup_471ec9e6fa33537fb69b6ae512b2dd00 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_6db514f595a94a4bf83088774807a94e = $(`<div id="html_6db514f595a94a4bf83088774807a94e" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/jandira.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/jandira.html', '_blank').focus();">Zoom to Jandira</a></div>`)[0];
-                popup_f60a917acb35f591d8a7324a2fbbb359.setContent(html_6db514f595a94a4bf83088774807a94e);
+                var html_0bdd67e28f909a58f080c466128afcfa = $(`<div id="html_0bdd67e28f909a58f080c466128afcfa" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/jandira.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/jandira.html', '_blank').focus();">Zoom to Jandira</a></div>`)[0];
+                popup_471ec9e6fa33537fb69b6ae512b2dd00.setContent(html_0bdd67e28f909a58f080c466128afcfa);
             
         
 
-        circle_marker_264a2fb415edab58f60caaa49a854bb4.bindPopup(popup_f60a917acb35f591d8a7324a2fbbb359)
+        circle_marker_08580485c96ee5ed96b25f3034668f2e.bindPopup(popup_471ec9e6fa33537fb69b6ae512b2dd00)
         ;
 
         
     
     
-            circle_marker_264a2fb415edab58f60caaa49a854bb4.bindTooltip(
+            circle_marker_08580485c96ee5ed96b25f3034668f2e.bindTooltip(
                 `<div>
                      Click to zoom to Jandira
                  </div>`,
@@ -130,28 +136,28 @@
             );
         
     
-            var circle_marker_40edadbe9321f476fc39d336d8b1d11d = L.circleMarker(
-                [-3.2566542347533796, -60.218538909623675],
+            var circle_marker_f505b01a3f816aa329f56652398bc2d8 = L.circleMarker(
+                [-3.2464514573211343, -60.21718762089296],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_6005f7b951f5435640fae0fc43719ef5);
+            ).addTo(map_182599f65faa49de98e43b14c21e9e2f);
         
     
-        var popup_9fccdaea9ee1d9e7dfcac70170cad442 = L.popup({"maxWidth": "100%"});
+        var popup_c6e52cd75fc70da5cadb3b8db8e162a6 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_f44cce3dbe146b1a731fc291eb64d4a4 = $(`<div id="html_f44cce3dbe146b1a731fc291eb64d4a4" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/caldeirao.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/caldeirao.html', '_blank').focus();">Zoom to Caldeirao</a></div>`)[0];
-                popup_9fccdaea9ee1d9e7dfcac70170cad442.setContent(html_f44cce3dbe146b1a731fc291eb64d4a4);
+                var html_e749e4dd080ecc2ec13df08206f0d898 = $(`<div id="html_e749e4dd080ecc2ec13df08206f0d898" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/caldeirao.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/caldeirao.html', '_blank').focus();">Zoom to Caldeirao</a></div>`)[0];
+                popup_c6e52cd75fc70da5cadb3b8db8e162a6.setContent(html_e749e4dd080ecc2ec13df08206f0d898);
             
         
 
-        circle_marker_40edadbe9321f476fc39d336d8b1d11d.bindPopup(popup_9fccdaea9ee1d9e7dfcac70170cad442)
+        circle_marker_f505b01a3f816aa329f56652398bc2d8.bindPopup(popup_c6e52cd75fc70da5cadb3b8db8e162a6)
         ;
 
         
     
     
-            circle_marker_40edadbe9321f476fc39d336d8b1d11d.bindTooltip(
+            circle_marker_f505b01a3f816aa329f56652398bc2d8.bindTooltip(
                 `<div>
                      Click to zoom to Caldeirao
                  </div>`,
@@ -159,28 +165,28 @@
             );
         
     
-            var circle_marker_43af29bf3d56ac66354c6b9803011b68 = L.circleMarker(
+            var circle_marker_275ab446e2fce07afa9457d4aeef1a5f = L.circleMarker(
                 [-3.2918238866956244, -60.16381959985592],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
-            ).addTo(map_6005f7b951f5435640fae0fc43719ef5);
+            ).addTo(map_182599f65faa49de98e43b14c21e9e2f);
         
     
-        var popup_6476b48269d55d89f4e5f0ad27459ccf = L.popup({"maxWidth": "100%"});
+        var popup_7a12a29ebaf997a2936a32202faa70f8 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_a6d0288a60bbec51c80aa47bbec71e6c = $(`<div id="html_a6d0288a60bbec51c80aa47bbec71e6c" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/iranduba.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/iranduba.html', '_blank').focus();">Zoom to Iranduba</a></div>`)[0];
-                popup_6476b48269d55d89f4e5f0ad27459ccf.setContent(html_a6d0288a60bbec51c80aa47bbec71e6c);
+                var html_09961d49c2bbea86047d2cb1100f4617 = $(`<div id="html_09961d49c2bbea86047d2cb1100f4617" style="width: 100.0%; height: 100.0%;"><a href="https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/iranduba.html" onclick="window.open('https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/iranduba.html', '_blank').focus();">Zoom to Iranduba</a></div>`)[0];
+                popup_7a12a29ebaf997a2936a32202faa70f8.setContent(html_09961d49c2bbea86047d2cb1100f4617);
             
         
 
-        circle_marker_43af29bf3d56ac66354c6b9803011b68.bindPopup(popup_6476b48269d55d89f4e5f0ad27459ccf)
+        circle_marker_275ab446e2fce07afa9457d4aeef1a5f.bindPopup(popup_7a12a29ebaf997a2936a32202faa70f8)
         ;
 
         
     
     
-            circle_marker_43af29bf3d56ac66354c6b9803011b68.bindTooltip(
+            circle_marker_275ab446e2fce07afa9457d4aeef1a5f.bindTooltip(
                 `<div>
                      Click to zoom to Iranduba
                  </div>`,
