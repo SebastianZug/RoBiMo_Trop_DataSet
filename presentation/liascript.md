@@ -7,7 +7,29 @@ narrator: US English Female
 import:   https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
 comment:  RoBiMo Trop Project Overview and Data Analysis
 
-link:     style.css
+@style
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap as needed */
+    align-items: stretch;
+    gap: 20px; /* Adds both horizontal and vertical spacing between items */
+}
+
+.flex-child { 
+    flex: 1;
+}
+
+.flex-child2 { 
+    flex: 3;
+}
+
+@media (max-width: 600px) {
+    .flex-child {
+        flex: 100%; /* Makes the child divs take up the full width on slim devices */
+        margin-right: 0; /* Removes the right margin */
+    }
+}
+@end
 -->
 
 # Open data in live mode
@@ -19,22 +41,24 @@ The importance of direct analyses and visualizations for the success of a measur
 
 <section class="flex-container">
 
-<div style="width: 34%; float: left">
 
-> Prof. Dr. Sebastian Zug, Gero Licht - TU Bergakademie Freiberg, Germany
+<div class="flex-child" style="min-width: 250px">
+
+> Prof. Dr. Sebastian Zug
+>
+> Gero Licht
+>
+> _TU Bergakademie Freiberg, Germany_
 >
 > __Freiberger Robotik Forum 2024__, 5.06.2024
 
 </div>
 
-<div>
-![](./images/SwimmingRobot_runstedt.jpg)<!-- style="width: 65%; float: right" -->
+<!-- class="flex-child2" style="min-width: 250px"-->
+![](https://raw.githubusercontent.com/SebastianZug/RoBiMo_Trop_DataSet/refs/heads/main/presentation/images/SwimmingRobot_runstedt.jpg)
 
-</div>
 
 </section>
-
----
 
 > Dieser Vortrag ist eine Open Educational Resource (OER) und steht unter der Lizenz [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Alle enthaltenen Inhalte können frei verwendet werden und sind unter https://github.com/Cross-Lab-Project/presentations/tree/main/Berufsschulen_2024 verfügbar
 
@@ -48,7 +72,9 @@ General Idea
 
 > "Autonomous operation of aquatic robots for aggregating physical, chemical, and biological data in lakes (and rivers)."
 
-<div style="width: 34%; float: left">
+<section class="flex-container">
+
+<div class="flex-child" style="min-width: 300px">
 
 Challenges:
 
@@ -58,11 +84,12 @@ Challenges:
 + failure mode detection and recovery
 
 </div>
-<div>
 
-![](./images/Trace_runstedt.jpg "Positions of a campaign while exploring an artefical lake in Germany")<!-- style="width: 65%; float: right" -->
 
-</div>
+<!-- class="flex-child2" -->
+![](https://raw.githubusercontent.com/SebastianZug/RoBiMo_Trop_DataSet/refs/heads/main/presentation/images/Trace_runstedt.jpg "Positions of a campaign while exploring an artefical lake in Germany")
+
+</section>
 
 ***************************************
 
@@ -76,7 +103,7 @@ History
 | Project                                                     | Partners                                                                      |  Duration   |
 | :---------------------------------------------------------- | :---------------------------------------------------------------------------- | :---------: |
 | AirGemm                                                     | Large interdisciplinary Team of partners from Bergakademie                    | 2019 - 2023 |
-| RoBiMo\_Trop                                                | Prof. for Geochemistry and Earth System Science, TUBAF, Prof Jörg Matschullat |  2021-2024  |
+| RoBiMo\_Trop                                                | Prof. for Geochemistry and Earth System Science, TUBAF, Prof Jörg Matschullat |  2021 - 2024  |
 | RoboBoatAssist                                              | Prof. for Virtual Reality and Multimedia, TUBAF, Prof. Bernhard Jung          | 2023 - 2024 |
 | [Carri-on](https://tu-freiberg.de/soro/projekte/carri-on)   | Prof. for Biogeochemistry , TUBAF, Prof. Maximilian Lau                       |    2025     |
 | [Submarine](https://tu-freiberg.de/sdc/forschung/SUBmarIne) | Scientific Diving Center, TUBAF, Dr. Thomas Grab                              | 2025 - 2028 |
@@ -90,16 +117,15 @@ History
 
 ## RoBiMo\_Trop - Project Overview
 
-<div style="width: 34%; float: left">
+<section class="flex-container">
 
+<!-- class="flex-child" style="min-width: 300px"-->
 The RoBiMo Trop project represents a significant advancement in conducting biological monitoring in tropical environments. The project automates the data aggregation process by combining sensor technology, data collection methodologies, and analytical approaches to study ecological systems in challenging tropical conditions.
 
-</div>
-<div>
+<!-- class="flex-child2" -->
+![](./images/SwimmingRobot_in_rain.jpg "Robot `under tropical conditions`")
 
-![](./images/SwimmingRobot_in_rain.jpg "Robot `under tropical conditions`")<!-- style="width: 65%; float: right" -->
-
-</div>
+</section>
 
 ### System setup & Data collection
 
@@ -114,19 +140,19 @@ Component        CO2 sensor    -------------------->| ESP32     |
                 Humidity       -->| Pi       |<---->| Sensor    |
                 Temperature    -->|          |      +-----------+
                                   |          |-----------------------> Logfiles (intended feature)
-                                  +----------+     
-                                                    
+                                  +----------+
+
 Autonomous                        +----------+    
 Boat Control    Depth sensor   -->| ArduPilot|
 Component                         | Pixhawk  |-----------------------> Download via ArduPilot
                                   |          |                         Mission planner
                                   +----------+
-  
-                                  +----------+ 
+
+                                  +----------+
 Obstacle        Laser scanner  -->| Raspberry|
-Monitoring      Thermal camera -->| Pi       |-----------------------> ROS2bag File  
-Component       Camera         -->|          |  
-                                  +----------+                                                                              .
+Monitoring      Thermal camera -->| Pi       |-----------------------> ROS2bag File
+Component       Camera         -->|          |
+                                  +----------+
 ```
 
 ### The Critical Role of Live Data Analysis
