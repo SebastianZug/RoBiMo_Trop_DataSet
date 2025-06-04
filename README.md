@@ -1,8 +1,12 @@
-# Data collection during RoBiMoTrop campaign  
+# Data collection and visualization during RoBiMoTrop campaign  
 
-The python scripts implement the data aggregation and processing pipeline of the RoBiMoTrop project aggregating water parameters by a robotic boat. It transforms data from different sources to Python pandas dataframes and ROS2 Bag files. TU Bergakademie Freiberg initiated the project.
+This Python-based toolkit implements the data aggregation and processing pipeline for the RoBiMoTrop project, which involves a robotic boat autonomously collecting water quality parameters. The scripts consolidate data from multiple sources, converting them into standardized formats such as Pandas DataFrames for analysis and ROS 2 Bag files for robotic system integration.
 
-The data can be explored on the corresponding [website](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/) and are available in the `data` folder. 
+The RoBiMoTrop project was initiated by TU Bergakademie Freiberg to support environmental monitoring and research through autonomous aquatic robotics.
+
+The preprocessed data set can be interactively explored via the [website](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/) and are available in the `data` folder. 
+
+
 
 ## System structure and data sources
 
@@ -43,7 +47,7 @@ Component       Camera         -->|          |
 
 ## Processing chain 
 
-+ __Measurement Component__ - Read the non standard format with `11_Extract_Measurements.ipynb`. The underlying python script stores the corresponding pandas files in `preproc_data_` folder.
++ __Measurement Component__ - Read the non-standard format with `11_Extract_Measurements.ipynb`. The underlying python script stores the corresponding pandas files in `preproc_data_` folder.
 
 
 + __ABC Component__ - The Log-Files of ArduPilot can be downloaded via Mission Planner as _bin_ or _log_ file. In case of reading the SD Card directly only binary files are available. Fortunately, ArduPilot offers an tool for offline translation too. After preprocessing all files by running the notebook `10_Extract_ArduPilotData.ipynb`. All dataframes are stored in `preproc_data_` folder.

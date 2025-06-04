@@ -11,7 +11,7 @@ In the course of the project, XXX measurements were taken with the multi-modal m
 | Location                                                       | Daylight | Night |
 | -------------------------------------------------------------- | -------- | ----- |
 | [Balbina Reservoir](https://en.wikipedia.org/wiki/Balbina_Dam) | 16       | 9     |
-| Caldeirao                                                      | 25       | nan   |
+| Caldeirao                                                      | 25       | 0     |
 | Iranduba                                                       | 19       | 12    |
 | Jandira                                                        | 25       | 8     |'
 
@@ -44,4 +44,4 @@ In the course of the project, XXX measurements were taken with the multi-modal m
 
 ## Interactive data exploration 
 
-A first version of the interactive data exploration tool is avialable [here](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/interactive_table.html).
+The interactive data exploration tool is avialable [here](https://sebastianzug.github.io/RoBiMo_Trop_DataSet/html/interactive_table.html).
