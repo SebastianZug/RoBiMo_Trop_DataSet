@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "robimo_trop_dataset"
+version = "0.1.0"
+description = "Data processing for RoBiMo Trop DataSet"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "*"
+jupyter = "*"
+geopandas = "*"
+folium = "*"
+haversine = "*"
+contextily = "*"
+matplotlib = "*"
+numpy = "*"
+hvplot = "*"
+panel = "*"
+papermill = "*"
+scikit-learn = "*"
+tabulate = "*"
+jupyter-bokeh = "*"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
