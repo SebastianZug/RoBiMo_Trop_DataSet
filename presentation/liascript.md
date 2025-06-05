@@ -1,7 +1,7 @@
 <!--
 author:  Sebastian Zug
 email:   sebastian.zug@informatik.tu-freiberg.de
-version:  0.3.0
+version:  0.4.0
 language: en
 narrator: US English Female
 import:   https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
@@ -62,7 +62,7 @@ The importance of direct analyses and visualizations for the success of a measur
 
 </section>
 
-> This presentation is an Open Educational Resource (OER) and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). All included content may be freely used and is available at https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/presentation/liascript.md.
+> This presentation is an Open Educational Resource (OER) and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). All included content may be freely used and is available at https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/presentation/liascript.md
 
 ## Swimming Robots in Freiberg
 
