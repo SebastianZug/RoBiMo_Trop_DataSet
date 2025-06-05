@@ -1,7 +1,7 @@
 <!--
-author:  Your Name
-email:   your.email@example.com
-version:  0.2.0
+author:  Sebastian Zug
+email:   sebastian.zug@informatik.tu-freiberg.de
+version:  0.3.0
 language: en
 narrator: US English Female
 import:   https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
@@ -32,6 +32,8 @@ comment:  RoBiMo Trop Project Overview and Data Analysis
 @end
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/RoBiMo_Trop_DataSet/refs/heads/main/presentation/liascript.md#1)
+
 # Open data in live mode
 
 <h5>
@@ -60,7 +62,7 @@ The importance of direct analyses and visualizations for the success of a measur
 
 </section>
 
-> Dieser Vortrag ist eine Open Educational Resource (OER) und steht unter der Lizenz [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Alle enthaltenen Inhalte können frei verwendet werden und sind unter https://github.com/Cross-Lab-Project/presentations/tree/main/Berufsschulen_2024 verfügbar
+> This presentation is an Open Educational Resource (OER) and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). All included content may be freely used and is available at https://github.com/SebastianZug/RoBiMo_Trop_DataSet/blob/main/presentation/liascript.md.
 
 ## Swimming Robots in Freiberg
 
@@ -80,7 +82,7 @@ Challenges:
 
 + obstacle detection in and above water
 + higly dynamic environments (e.g., wind, waves, currents)
-+ "interessted public" (e.g., swimmers, boats, etc.)
++ "interested public" (e.g., swimmers, boats, etc.)
 + failure mode detection and recovery
 
 </div>
@@ -157,7 +159,7 @@ Component       Camera         -->|          |
 
 ### The Critical Role of Live Data Analysis
 
-Live data analysis stands as a cornerstone of the RoBiMo Trop campaign for several pivotal reasons:
+Live data analysis stands as a cornerstone of the RoBiMo\_Trop campaign for several pivotal reasons:
 
 + **Quality Assurance**: Continuous monitoring of data quality ensures that any issues with sensors or data collection methods can be addressed promptly, minimizing the risk of collecting flawed data.
 + **Adaptive Research Strategies**: The ability to analyze data in real-time allows researchers to adapt their sampling strategies based on immediate findings, enhancing the relevance and efficiency of the research.
