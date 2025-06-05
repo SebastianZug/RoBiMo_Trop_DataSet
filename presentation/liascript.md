@@ -1,7 +1,7 @@
 <!--
 author:  Your Name
 email:   your.email@example.com
-version:  0.1.0
+version:  0.2.0
 language: en
 narrator: US English Female
 import:   https://raw.githubusercontent.com/liaScript/mermaid_template/master/README.md
@@ -163,6 +163,7 @@ Live data analysis stands as a cornerstone of the RoBiMo Trop campaign for sever
 + **Adaptive Research Strategies**: The ability to analyze data in real-time allows researchers to adapt their sampling strategies based on immediate findings, enhancing the relevance and efficiency of the research.
 
 ![](./images/Jandira_Positions_2.png "Improvable position control of the robot in Jandira")
+![](./images/Results_runstedt.jpg "Levels of different parameters in a German lake")
 
 ## Implementation
 
@@ -212,8 +213,14 @@ flowchart TD
 
 + **Papermill** supports the orchestration of multiple notebooks https://github.com/nteract/papermill
 
-> Let's take a closer view to the actual code.
+> Let's take a closer view to the actual code -> https://github.com/SebastianZug/RoBiMo_Trop_DataSet
 
-## Lessons learned
+## Lessons learned for live hacking
 
-...
++ Identify the expected outcomes and the personal skills of the involved team member before starting
++ Offer different levels of access to the code and data
++ Notebooks are great for prototyping ... but ugly for collaboration
++ Be prepared for areas without internet access
++ Automate processes as much as possible
+
+> A heartfelt thank you to the RoBiMo\_Trop team from the different faculties of TUBAF! This interdisciplinary "hackathon" was a valuable learning experience for agile software development.
